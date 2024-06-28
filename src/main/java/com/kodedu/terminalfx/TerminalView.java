@@ -84,7 +84,7 @@ public class TerminalView extends Pane {
 	private void initializeResources() {
 		try {
 			if(Objects.isNull(tempDirectory) || Files.notExists(tempDirectory)){
-				this.tempDirectory = Files.createTempDirectory("TerminalFX_Temp");
+				TerminalView.tempDirectory = Files.createTempDirectory("TerminalFX_Temp");
 			}
 		} catch (IOException e) {
 			throw new RuntimeException(e);
